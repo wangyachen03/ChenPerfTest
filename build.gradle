@@ -1,0 +1,49 @@
+plugins {
+
+	id 'org.springframework.boot' version '2.2.9.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+//	id 'com.github.johnrengelman.shadow' version '1.2.3'
+	id 'java'
+	id 'idea'
+}
+
+group = 'com.chenn'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+jar {
+	manifest {
+		attributes "Manifest-Version": 1.0,
+				'Main-Class': 'com.chen.xia.XiaApplication'
+	}
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.9.RELEASE'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
+	testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+
+}
+test {
+//	useTestNG()
+	System.out.println("wang-yan-chen")
+}
+
+clean  {
+	System.out.println("gradle - clean - start")
+}
+
+build {
+	jar
+}
