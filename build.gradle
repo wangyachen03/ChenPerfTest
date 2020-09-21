@@ -36,8 +36,7 @@ dependencies {
 
 }
 test {
-//	useTestNG()
-	System.out.println("wang-yan-chen")
+	useTestNG()
 }
 
 clean  {
