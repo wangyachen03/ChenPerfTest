@@ -8,7 +8,7 @@ public interface UserMapper {
 
     User getUserInfoById(int id);
 
-    User getUserInfoByLoginname(String loginname);
+    User getUserInfoByLoginName(String loginname);
 
     int insertUser(User user);
 }

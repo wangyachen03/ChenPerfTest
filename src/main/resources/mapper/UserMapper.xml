@@ -7,14 +7,14 @@
         <result column="loginname" jdbcType="VARCHAR" property="loginname" javaType="String"/>
         <result column="passwd" jdbcType="VARCHAR" property="passwd" javaType="String"/>
         <result column="sex" jdbcType="VARCHAR" property="sex" javaType="String"/>
-        <result column="age" jdbcType="INTEGER" property="sex" javaType="int"/>
+        <result column="age" jdbcType="INTEGER" property="age" javaType="int"/>
     </resultMap>
 
-    <select id="getUserInfoById" resultType="com.chen.xia.entity.User">
+    <select id="getUserInfoById" resultMap="userinfo">
         select * from user where id = #{id}
     </select>
 
-    <select id="getUserInfoByLoginname" resultType="com.chen.xia.entity.User">
+    <select id="getUserInfoByLoginName" resultMap="userinfo">
         select * from user where  loginname= #{loginname}
     </select>
 

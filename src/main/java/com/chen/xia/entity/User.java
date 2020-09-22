@@ -7,7 +7,16 @@ public class User {
     private String sex;
     private int age;
 
-    public User() {}
+    public User() {
+    }
+
+    public User(int id, String loginname, String passwd, String sex, int age) {
+        this.id = id;
+        this.loginname = loginname;
+        this.passwd = passwd;
+        this.sex = sex;
+        this.age = age;
+    }
 
     public User(String loginname, String passwd, String sex, int age) {
         this.loginname = loginname;

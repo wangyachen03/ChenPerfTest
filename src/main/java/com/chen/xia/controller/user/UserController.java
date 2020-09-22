@@ -15,14 +15,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/getUserInfo")
+    @GetMapping("/getUserInfoById")
     @ResponseBody
-    public String getUserInfoById(){
+    public String getUserInfoById(@RequestParam int id){
 
-        System.out.println("....");
-        User user = userService.getUserInfoById(3);
+        User user = userService.getUserInfoById(id);
         System.out.println(user.toString());
 
+        return user.toString();
+    }
+
+    @GetMapping("/getUserInfoByLoginName")
+    @ResponseBody
+    public String getUserInfoByLoginName(@RequestParam String loginname){
+
+        User user = userService.getUserInfoByLoginName(loginname);
         return user.toString();
     }
 

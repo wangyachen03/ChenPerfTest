@@ -4,7 +4,7 @@ import com.chen.xia.entity.User;
 
 public interface UserService {
 
-    User getUserInfoByLoginname(String username);
+    User getUserInfoByLoginName(String username);
 
     User getUserInfoById(int id);
 
