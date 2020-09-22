@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.xia.mapper.UserMapper">
+
+    <resultMap id="userinfo" type="com.chen.xia.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id" javaType="int"/>
+        <result column="loginname" jdbcType="VARCHAR" property="loginname" javaType="String"/>
+        <result column="passwd" jdbcType="VARCHAR" property="passwd" javaType="String"/>
+        <result column="sex" jdbcType="VARCHAR" property="sex" javaType="String"/>
+        <result column="age" jdbcType="INTEGER" property="sex" javaType="int"/>
+    </resultMap>
+
+    <select id="getUserInfoById" resultType="com.chen.xia.entity.User">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="getUserInfoByLoginname" resultType="com.chen.xia.entity.User">
+        select * from user where  loginname= #{loginname}
+    </select>
+
+    <insert id="insertUser" parameterType="com.chen.xia.entity.User" keyColumn="id" useGeneratedKeys="true" keyProperty="id">
+        insert into user(loginname,passwd,sex,age) values(#{loginname},#{passwd},#{sex},#{age});
+    </insert>
+</mapper>
