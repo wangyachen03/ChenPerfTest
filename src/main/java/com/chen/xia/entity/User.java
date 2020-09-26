@@ -1,14 +1,15 @@
 package com.chen.xia.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private int id;
     private String loginname;
     private String passwd;
     private String sex;
     private int age;
 
-    public User() {
-    }
+    public User() {}
 
     public User(int id, String loginname, String passwd, String sex, int age) {
         this.id = id;

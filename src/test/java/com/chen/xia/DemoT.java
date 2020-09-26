@@ -2,7 +2,9 @@ package com.chen.xia;
 
 import org.testng.annotations.Test;
 
-import java.util.UUID;
+import java.util.Random;
+import java.util.function.DoubleToIntFunction;
+
 
 public class DemoT {
     @Test
@@ -12,7 +14,6 @@ public class DemoT {
 
     @Test
     public void test01(){
-        String uuid = UUID.randomUUID().toString().replace("-","");
-        System.out.println(uuid);
+
     }
 }
