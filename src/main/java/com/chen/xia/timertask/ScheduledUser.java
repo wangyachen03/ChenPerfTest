@@ -1,4 +1,4 @@
-package com.chen.xia.timertask.scheduled;
+package com.chen.xia.timertask;
 
 import com.chen.xia.entity.User;
 import com.chen.xia.util.RedisUtil;
@@ -30,6 +30,5 @@ public class ScheduledUser {
         }else {
             System.out.println("调用定时任务..."+new Date());
         }
-
     }
 }
