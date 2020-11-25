@@ -22,7 +22,7 @@ public class ScheduledUser {
      * @Scheduled:  设置定时任务
      * cron属性: cron表达式，定时任务触发时间
      */
-    @Scheduled(cron = "0/2 * * * * *")
+    @Scheduled(cron = "0/10 15 * * * *")
     public void addUser(){
         User user = (User) redisUtil.get("chen");
         if (user!=null){
