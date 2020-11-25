@@ -42,7 +42,7 @@ dependencies {
 
 	//整合kafka
 //	implementation group: 'org.springframework.kafka', name: 'spring-kafka'
-	compile 'org.springframework.kafka:spring-kafka:2.6.1'
+//	compile 'org.springframework.kafka:spring-kafka:2.6.1'
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
